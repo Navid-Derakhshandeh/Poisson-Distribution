@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<script type="text/javascript">
+		function poisson()
+		{
+			var p = document.getElementById('txtNum1').value
+			var a = document.getElementById('txtNum2').value
+			var v = document.getElementById('txtNum3').value
+			var c = p / 100;
+			var f = 1
+			var e = 2.718281828459045
+			var landa = a * c;
+			var s = e ^ landa;
+			var q = landa ^ v;
+			var g = s * q;
+			
+			for(var i=v;i>1;--i)
+				f *= i;
+				
+			var result = g / f;	
+			alert(result)
+		}
+		</script>
+	</head>
+	<body>
+	    <p Style="width:500px; height:200px; background:#B0C4DE;"> 
+	    Probability <input type="text" id="txtNum1" /><br><br> 
+		Production rate <input type="text" id="txtNum2" /><br><br>
+		Number of products that has technical defect <input type="text" id="txtNum3" /><br><br>
+		
+		<input type="button" value="Calculate" onclick="poisson()"/>
+		</p>
+	</body>
+</html>
